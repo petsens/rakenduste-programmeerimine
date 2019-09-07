@@ -7,7 +7,15 @@
 <link href = "main.css" rel = "stylesheet">
 
 <script>
-	alert("Hello World!");
+	//alert("Hello World!");
+	const x  = window.location;
+	console.log(x);
+	const urlParams = new URLSearchParams(window.location.search);
+	const title = urlParams.get("title");
+	const cost = urlParams.get("cost");
+	const src = urlParams.get("src");
+	console.log(title, cost, src);
+	alert(`Title: ${title} cost: ${cost} path: ${src}`);
 </script>
 
 <meta charset="UTF-8">
