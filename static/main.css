@@ -37,8 +37,11 @@
 		width: 200px;
 	}
 	.item_title{
+		width: auto;
 		color: black;
 		font-size: 14px;
+		text-align: center;
+		position: relative;
 	}
 	.item_price{
 		color: red;
