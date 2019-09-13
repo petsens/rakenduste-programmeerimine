@@ -1,12 +1,9 @@
 {
   "name": "rakenduste-programmeerimine",
   "version": "1.0.0",
-<<<<<<< HEAD
   "scripts": {
     "start": "node server.js"
   },
-=======
->>>>>>> lesson1
   "dependencies": {
     "express": "^4.17.1"
   }
