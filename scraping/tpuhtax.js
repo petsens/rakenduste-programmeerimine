@@ -2,8 +2,12 @@
 {
 	const itemContainerClass = "product list-item__product";
 	const imageClass = "entry-thumb wp-post-image lazy-loaded";
+	const titleClass = "entry-title";
+	//const priceClass = "";
 
-	const items = document.GetElementsByClassName(itemContainerClass);
+	const items = document.getElementsByClassName(itemContainerClass);
+
+	const arr = [];
 
 	// HTMLDivElement[] to Array
 	Array.from(items).forEach( item =>{
@@ -12,9 +16,19 @@
 		const img = imgs(0);
 		
 		const src = img.dataset.src;
-		console.log("src", src);
-		console.log(img);
+
+		if(!src) return; //Skip these
+
+		const title = item.getElementByClassName(titleClass)[0].textContent;
+		//const price = item.getElementByClassName(priceClass)[0].textContent;
+
+		arr.push({
+			imgSrc: src,
+			title,
+			//price,
+			category: document.title.split("|")[0].trim(),
+		})
 	});
 
-	//console.log(items);
+	console.log(JSON.stringify(arr));
 }
