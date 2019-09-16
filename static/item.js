@@ -35,5 +35,6 @@
 
 	window.addEventListener("load", () =>{
 	const app = document.getElementById("item-body");
+	console.log(app);
 	app.append(container)
 	});

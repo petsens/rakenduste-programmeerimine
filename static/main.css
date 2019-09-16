@@ -18,16 +18,19 @@
 		width: 200px;
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 	.content{
 		display: flex;
 		justify-content: space-around;
+		flex-wrap: wrap;
 	}
 	.item{
 		box-shadow: 2px 2px 2px 1px rgba(0 ,0, 0, 0.2);
 		border-radius: 5px;
 		padding: 5px;
 		width: 200px;
+		margin-bottom: 25px;
 	}
 	.item:hover{
 		cursor: pointer;
@@ -43,6 +46,7 @@
 		font-size: 14px;
 		text-align: center;
 		position: relative;
+		font-weight: bold;
 	}
 	.item_price{
 		color: red;
@@ -58,5 +62,8 @@
 	}
 	.itemContainer, .item__image{
 		width: 200px;
+	}
+	.category-wrapper{
+		padding: 25px;
 	}
 </style>
