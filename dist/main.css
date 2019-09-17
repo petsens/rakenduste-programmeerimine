@@ -10,6 +10,9 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 25px;
+		position: sticky;
+		top: 0;
+
 	}
 	.header_logo{
 		width: 200px;
@@ -18,15 +21,21 @@
 		width: 200px;
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 	.content{
 		display: flex;
 		justify-content: space-around;
+		flex-wrap: wrap;
+		width: 1000px;
+		margin: 0 auto;
 	}
 	.item{
 		box-shadow: 2px 2px 2px 1px rgba(0 ,0, 0, 0.2);
 		border-radius: 5px;
 		padding: 5px;
+		width: 200px;
+		margin-bottom: 25px;
 	}
 	.item:hover{
 		cursor: pointer;
@@ -42,6 +51,7 @@
 		font-size: 14px;
 		text-align: center;
 		position: relative;
+		font-weight: bold;
 	}
 	.item_price{
 		color: red;
@@ -49,5 +59,16 @@
 	}
 	.content a {
 		text-decoration: none;
+	}
+	.itemContainer{
+		box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+		width: 90%;
+		padding: 20px 0px;
+	}
+	.itemContainer, .item__image{
+		width: 200px;
+	}
+	.category-wrapper{
+		padding: 25px;
 	}
 </style>
