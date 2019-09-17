@@ -10,6 +10,9 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 25px;
+		position: sticky;
+		top: 0;
+
 	}
 	.header_logo{
 		width: 200px;
@@ -24,6 +27,8 @@
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
+		width: 1000px;
+		margin: 0 auto;
 	}
 	.item{
 		box-shadow: 2px 2px 2px 1px rgba(0 ,0, 0, 0.2);

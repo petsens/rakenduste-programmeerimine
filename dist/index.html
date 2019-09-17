@@ -2,13 +2,17 @@
 <html lang="et">
 
 <head>
-<title>Royal Detailing Toodete Leht</title>
+<title>Royal Detailing</title>
+
 <link href = "main.css" rel = "stylesheet">
-<script src = "item.js"></script>
+<script src = "bundle.js"></script>
+
 <meta charset="UTF-8">
 
 </head>
 <body>
+
+	
 
 	<div class = "header">
 		<a href = "index.html">
@@ -19,8 +23,16 @@
 			<button>Cart</button>	
 		</div>
 	</div>
-	<div class = "content" id = "item-body">
 
+	<div class="category-wrapper">
+		Select category:
+		<select id = "category-dropdown" name = "category">
+			<option value = "products" selected>Tooted</option>
+			<option Value = "washFluids">Klaasipesuvedelik</option>
+		</select>
+	</div>
+
+	<div class = "content" id = "item-list">
 	</div>
 
 </body>
