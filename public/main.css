@@ -4,7 +4,7 @@
 	}
 	.header{
 		box-shadow: 2px 2px 2px 1px rgba(0 ,0, 0, 0.2);
-		background: white;
+		background: rgba(42, 118, 206, 0.753);
 		padding: 10px 25px;
 		display: flex;
 		justify-content: space-between;
@@ -12,7 +12,6 @@
 		margin-bottom: 25px;
 		position: sticky;
 		top: 0;
-
 	}
 	.header_logo{
 		width: 200px;
