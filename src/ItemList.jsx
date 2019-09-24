@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import HomePage from "./HomePage.jsx";
 
 const ItemList = (props) => {
     return (
@@ -10,11 +11,11 @@ const ItemList = (props) => {
                 imgSrc = {item.imgSrc}
                 title = {item.title} 
                 price = {item.price} 
-                />
+                />;
             })
         }
         </div>
-    )
+    );
 };
 
 const Item = (props) => {
@@ -26,7 +27,7 @@ const Item = (props) => {
             <div className = "item_price">{props.price}</div>
             </div>
         </Link> 
-        )
+        );
 };
 
 export default ItemList;
