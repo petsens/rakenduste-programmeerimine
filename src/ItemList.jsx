@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import HomePage from "./HomePage.jsx";
+import PropTypes from "prop-types";
 
 const ItemList = (props) => {
     return (
@@ -18,6 +18,10 @@ const ItemList = (props) => {
     );
 };
 
+ItemList.propTypes = {
+    items: PropTypes.array
+};
+
 const Item = (props) => {
     return (
         <Link to = {"/item"}>
@@ -28,6 +32,12 @@ const Item = (props) => {
             </div>
         </Link> 
         );
+};
+
+Item.propTypes = {
+    imgSrc: PropTypes.string,
+    title: PropTypes.string,
+    price: PropTypes.string,
 };
 
 export default ItemList;
