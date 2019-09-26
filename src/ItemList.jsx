@@ -7,7 +7,8 @@ const ItemList = (props) => {
         <div className = {"content"}>    
         {
             props.items.map( item => {
-                return <Item 
+                return < Item
+                key = {item.title} 
                 imgSrc = {item.imgSrc}
                 title = {item.title} 
                 price = {item.price} 
@@ -19,7 +20,7 @@ const ItemList = (props) => {
 };
 
 ItemList.propTypes = {
-    items: PropTypes.array
+    items: PropTypes.array.isRequired
 };
 
 const Item = (props) => {
@@ -35,9 +36,9 @@ const Item = (props) => {
 };
 
 Item.propTypes = {
-    imgSrc: PropTypes.string,
-    title: PropTypes.string,
-    price: PropTypes.string,
+    imgSrc: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
 };
 
 export default ItemList;

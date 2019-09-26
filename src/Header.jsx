@@ -11,7 +11,7 @@ const Header = () => {
             <button>Login/Signup</button>
             <button>Cart</button>
         </div>
-  	</div>
+    </div>
     );
 };
 

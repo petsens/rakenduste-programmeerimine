@@ -13,7 +13,7 @@ class HomePage extends React.PureComponent{
     }
 
     handleChange(event){
-        switch (event.tartget.value) {
+        switch (event.target.value) {
             case "products":{
                 this.setState({
                     items: products,
