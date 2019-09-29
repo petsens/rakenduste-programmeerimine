@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header.jsx";
-import {products} from "./mydatabase";
+import {products} from "./mydatabase.js";
 
 class ItemPage extends React.PureComponent{
     render(){

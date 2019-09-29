@@ -6,7 +6,7 @@ const DB = require("./database.js");
 
 // GET all items
 app.get("/api/items", (req, res) =>{
-  res.json(DB.getItems);
+  res.json(DB.getItems());
 });
 
 //GET item with id
@@ -18,8 +18,12 @@ app.post("/hello", (req, res) =>{
   res.send("post hello");
 });
 
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
 	res.sendFile(path.resolve(__dirname, "dist", "index.html"));
+});
+
+app.get('/items/*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../dist", "index.html"));
 });
 
 app.use(express.static("static"));

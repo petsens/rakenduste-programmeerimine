@@ -1,5 +1,4 @@
 import React from "react";
-import {products, washFluids} from "./mydatabase.js";
 import Header from "./Header.jsx";
 import ItemList from "./ItemList.jsx";
 
@@ -8,11 +7,16 @@ class HomePage extends React.PureComponent{
     constructor(props){
         super(props);
         this.state = {
-            items: products,
+            items: [],
+            selectedCategory: "products",
         };
     }
 
     componentDidMount(){
+        this.fetchItems();
+    }
+
+    fetchItems = () => {
         fetch("http://localhost:9000/api/items")
         .then(res =>{
             console.log("res", res);
@@ -20,38 +24,35 @@ class HomePage extends React.PureComponent{
         })
         .then( items => {
             console.log("items", items);
+            this.setState({
+                items
+            });
         })
         .catch(err =>{
             console.log("err", err);
         });
-    }
+    };
 
-    handleChange(event){
-        switch (event.target.value) {
-            case "products":{
-                this.setState({
-                    items: products,
-                });
-                break;
-            }
-            case "washFluids":{
-                this.setState({
-                    items: washFluids,
-                });
-                break;
-            }
-        }
-    }
+    handleDropdown(event){
+       this.setState({
+           selectedCategory: event.target.value
+       });
+    } 
+
+    getVisibleItems = () => {
+        return this.state.items.filter( item => item.category === this.state.selectedCategory);
+    };
 
     render(){
+        console.log("this.state", this.state);
         return (
             <>
                 <Header/>
-                <select onChange = {this.handleChange.bind(this)}>
+                <select onChange = {this.handleDropdown.bind(this)}>
                     <option value = "products">Tooted</option>
                     <option value = "washFluids">Aknapesuvedelikud</option>
                 </select>
-                <ItemList items = {this.state.items} />
+                <ItemList items = {this.getVisibleItems()} />
             </>
         );
     }
