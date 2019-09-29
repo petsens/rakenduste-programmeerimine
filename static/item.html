@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+<title>Royal Detailing Toodete Leht</title>
+
+<link href = "main.css" rel = "stylesheet">
+
+<script>
+	//alert("Hello World!");
+	const x  = window.location;
+	console.log(x);
+	const urlParams = new URLSearchParams(window.location.search);
+	const title = urlParams.get("title");
+	const cost = urlParams.get("cost");
+	const src = urlParams.get("src");
+	console.log(title, cost, src);
+	alert(`Title: ${title} cost: ${cost} path: ${src}`);
+</script>
+
+<meta charset="UTF-8">
+
+</head>
+<body>
+
+	<div class = "header">
+		<a href = "index.html">
+			<img class = "header_logo" src = "./images/rd_logo.png">'
+		</a>
+		<div class = "header_buttons">
+			<button>Login/Register</button>
+			<button>Cart</button>	
+		</div>
+	</div>
+	<div class = "content">
+	
+		Olen toodete leht.
+
+	</div>
+
+</body>
+</html>
