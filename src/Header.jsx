@@ -5,7 +5,7 @@ const Header = () => {
     return (
     <div className="header">
         <Link to = {"/"}>
-            <img className="header_logo" src=".//images/rd_logo.png" /> 
+            <img className="header_logo" src="/images/rd_logo.png" /> 
         </Link>
         <div className="header_buttons">
             <button>Login/Signup</button>

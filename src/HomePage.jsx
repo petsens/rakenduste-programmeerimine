@@ -44,7 +44,6 @@ class HomePage extends React.PureComponent{
     };
 
     render(){
-        console.log("this.state", this.state);
         return (
             <>
                 <Header/>
