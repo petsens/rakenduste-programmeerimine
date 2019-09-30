@@ -1,10 +1,6 @@
 import React from "react";
 import Header from "./Header.jsx";
-<<<<<<< HEAD
 import PropTypes from "prop-types";
-=======
-import {products, washFluids} from "./mydatabase";
->>>>>>> a3cf702a05056d253396014a66a8ee27280059ad
 
 class ItemPage extends React.PureComponent{
 
@@ -18,7 +14,7 @@ class ItemPage extends React.PureComponent{
     }
 
     fetchItem = () => {
-        fetch(`http://localhost:9000/api/items/${this.props.match.params.itemId}`)
+        fetch(`/api/items/${this.props.match.params.itemId}`)
         .then( res =>{
             return res.json();
         })
