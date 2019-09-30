@@ -21,7 +21,17 @@ Nõuded:
 7. Saab saata lehelt emaili poele <br/>
 8. Ütleb mida tihti koos ostetakse <br/> 
 9. Soovitab sarnaseid tooteid <br/>
-10. 
+10. Lehel on lingid firma instagrami ja facebooki lehele
+11. Lehel on feedbacki osa, kuhu saad kirjutada mis häirib/meeldib ja mida annaks paremaks teha
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. 
+19. 
+20. 
 
 ![JS Meme](meme.jpg)
 

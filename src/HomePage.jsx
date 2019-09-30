@@ -48,7 +48,7 @@ class HomePage extends React.PureComponent{
         return (
             <>
                 <Header/>
-                <select onChange = {this.handleDropdown.bind(this)}>
+                <select onChange = {this.handleDropdown.bind(this)} className = {"dropDown_button"}>
                     <option value = "products">Tooted</option>
                     <option value = "washFluids">Aknapesuvedelikud</option>
                 </select>
