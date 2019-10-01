@@ -17,7 +17,7 @@ class HomePage extends React.PureComponent{
     }
 
     fetchItems = () => {
-        fetch("http://localhost:9000/api/items")
+        fetch("/api/items")
         .then(res =>{
             console.log("res", res);
             return res.json();
@@ -44,10 +44,11 @@ class HomePage extends React.PureComponent{
     };
 
     render(){
+        console.log("this.state", this.state);
         return (
             <>
                 <Header/>
-                <select onChange = {this.handleDropdown.bind(this)}>
+                <select onChange = {this.handleDropdown.bind(this)} className = {"dropDown_button"}>
                     <option value = "products">Tooted</option>
                     <option value = "washFluids">Aknapesuvedelikud</option>
                 </select>
@@ -56,5 +57,4 @@ class HomePage extends React.PureComponent{
         );
     }
 }
-
 export default HomePage;
