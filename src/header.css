@@ -1,0 +1,38 @@
+.header{
+    z-index: 100;
+    box-shadow: 2px 2px 2px 1px rgba(0 ,0, 0, 0.2);
+    background: rgba(33, 87, 185, 0.2);
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    position: sticky;
+    top: 0;
+}
+.header_logo{
+    width: 250px;
+    height: 100%;
+}
+.header_buttons{
+    width: 225px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center; 
+}
+.header_buttons img{
+    height: 30px;
+    margin-right: 5px;
+}
+.header_button{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    color: #333;
+}
+.header_button-text{
+    font-display: bold;
+    font-size: 15px;
+}
