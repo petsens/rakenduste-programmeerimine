@@ -4,6 +4,7 @@ import ItemList from "./ItemList.jsx";
 import Checkbox from "./Checkbox.jsx";
 import PropTypes from "prop-types";
 import "./homepage.css";
+import Dropdown from "./Dropdown.jsx";
 
 class HomePage extends React.PureComponent{
 
@@ -71,6 +72,9 @@ class HomePage extends React.PureComponent{
                     handleDropdown = {this.handleDropdown}
                     isSelected = {this.isSelected}
                 />
+                <div className = {"items_settings"}>
+                    <Dropdown />
+                </div>
                 <ItemList items = {this.getVisibleItems()} />
             </>
         );
