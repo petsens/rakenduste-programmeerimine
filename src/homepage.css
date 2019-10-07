@@ -1,0 +1,10 @@
+.itemFilters_wrapper{
+    display: flex;
+    width: 955px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.itemFilters_wrapper > div{
+    margin-right: 25px;
+}
