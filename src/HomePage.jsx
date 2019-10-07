@@ -10,7 +10,7 @@ class HomePage extends React.PureComponent{
         this.state = {
             items: [],
             allCategories: ["products", "washFluids"],
-            selectedCategories: "products",
+            selectedCategories: ["products"],
         };
     }
 
@@ -38,6 +38,7 @@ class HomePage extends React.PureComponent{
     handleDropdown = (event) => {
         console.log(event.target.value, event.target.name);
         if(this.isSelected(event.target.name)){
+            console.log(this.state.selectedCategories.slice());
             const clone = this.state.selectedCategories.slice();
             const index = this.state.selectedCategories.indexOf(event.target.name);
             clone.splice(index, 1);
@@ -53,7 +54,7 @@ class HomePage extends React.PureComponent{
     } 
 
     getVisibleItems = () => {
-        return this.state.items.filter( item => item.category === this.state.selectedCategory);
+        return this.state.items.filter( item => this.isSelected(item.category));
     };
 
     isSelected = (name) => this.state.selectedCategories.indexOf(name) >= 0;
