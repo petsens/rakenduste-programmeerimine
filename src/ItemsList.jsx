@@ -29,7 +29,7 @@ const Item = (props) => {
     return (
         <Link to = {`/items/${props.id}`}>
             <div className = {"item"}>
-            <img src = {props.imgSrc} />
+            <img className = {"item_image"} src = {props.imgSrc} />
             <div className = "item_title">{props.title}</div>
             <div className = "item_price">{props.price}</div>
             </div>

@@ -1,19 +1,17 @@
-.item {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-template-rows: repeat(2, auto-fit);
+@media (max-width: 1000px) {
+    .item{
+        max-width:100%;
+    }
+    .content{
+        max-width:100%;
+    }
+    .custom-select-wrapper{
+        align-content: right;
+        margin-left: 200px;
+    }
 }
 
 .item:hover {
-    transition: all .2s ease-in-out; 
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
-.content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-template-rows: repeat(4, auto-fit);
-    grid-gap: 1rem;
-    grid-auto-flow: dense;
-}
