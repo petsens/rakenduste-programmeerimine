@@ -8,3 +8,7 @@
 .itemFilters_wrapper > div{
     margin-right: 25px;
 }
+
+body {
+    font-family: 'Open-Sans', sans-serif;
+}
