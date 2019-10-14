@@ -155,14 +155,14 @@ const getItems = () => {
     products.forEach( (product, index) =>{
         items.push({
             ...product,
-            id: "products-" + index,
+            //id: "products-" + index,
             category: "products"
         });
     });
     washFluids.forEach( (washFluid, index) =>{
         items.push({
             ...washFluid,
-            id: "washFluids-" + index,
+            //id: "washFluids-" + index,
             category: "washFluids"
         });
     });
