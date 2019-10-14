@@ -1,0 +1,17 @@
+@media (max-width: 1000px) {
+    .item{
+        max-width:100%;
+    }
+    .content{
+        max-width:100%;
+    }
+    .custom-select-wrapper{
+        align-content: right;
+        margin-left: 200px;
+    }
+}
+
+.item:hover {
+    transform: scale(1.1);
+}
+

@@ -1,8 +1,9 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
+import "./itemslist.css";
 
-const ItemList = (props) => {
+const ItemsList = (props) => {
     return (
         <div className = {"content"}>    
         {
@@ -20,7 +21,7 @@ const ItemList = (props) => {
     );
 };
 
-ItemList.propTypes = {
+ItemsList.propTypes = {
     items: PropTypes.array.isRequired
 };
 
@@ -28,7 +29,7 @@ const Item = (props) => {
     return (
         <Link to = {`/items/${props.id}`}>
             <div className = {"item"}>
-            <img src = {props.imgSrc} />
+            <img className = {"item_image"} src = {props.imgSrc} />
             <div className = "item_title">{props.title}</div>
             <div className = "item_price">{props.price}</div>
             </div>
@@ -43,5 +44,5 @@ Item.propTypes = {
     price: PropTypes.string.isRequired,
 };
 
-export default ItemList;
+export default ItemsList;
 
