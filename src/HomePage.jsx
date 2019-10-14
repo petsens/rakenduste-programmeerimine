@@ -57,9 +57,6 @@ class HomePage extends React.PureComponent{
     } 
 
     getVisibleItems = () => {
-<<<<<<< HEAD
-        return this.state.items.filter( item => this.isSelected(item.category));
-=======
         return this.state.items
             .filter( item => this.isSelected(item.category))
             .sort( (a, b) => {
@@ -68,7 +65,6 @@ class HomePage extends React.PureComponent{
                     case 1: return a.price - b.price;
                 }
             });
->>>>>>> lesson5
     };
 
     isSelected = (name) => this.state.selectedCategories.indexOf(name) >= 0;
@@ -90,11 +86,6 @@ class HomePage extends React.PureComponent{
                     isSelected = {this.isSelected}
                 />
                 <div className = {"items_settings"}>
-<<<<<<< HEAD
-                    <Dropdown />
-                </div>
-                <ItemList items = {this.getVisibleItems()} />
-=======
                     <div>
                         Items found {items.length} from {this.state.selectedCategories.join(", ")}
                     </div>
@@ -104,7 +95,6 @@ class HomePage extends React.PureComponent{
                     />
                 </div>
                 <ItemsList items = {items} />
->>>>>>> lesson5
             </>
         );
     }

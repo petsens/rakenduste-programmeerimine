@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const DB = require("./database.js");
+//const DB = require("./database.js");
 const mongoose = require("mongoose");
 
 const itemSchema = new mongoose.Schema({
@@ -12,6 +12,30 @@ const itemSchema = new mongoose.Schema({
 });
 
 const Item = mongoose.model("Item", itemSchema);
+
+// Delete an item
+router.delete("/api/items/:itemId", (req, res) =>{
+    Item.deleteOne({"_id" : mongoose.Types.ObjectId(req.params.itemId)}, (err) =>{
+        if(err) {
+        console.log(err);
+        return res.send(500);
+        }
+        console.log("Save success!");
+        return res.send(204);
+    });
+});
+
+// Returns all items
+router.get("/api/items", (req, res) =>{
+    Item.find({}, function(err, items){
+        if(err){
+            console.log("Error:", err);
+            res.status(500).send(err);
+            return;
+        }
+        res.send(items); 
+    });
+});
 
 // Create a new item
 router.post("/api/items", (req, res) =>{
@@ -33,7 +57,7 @@ router.post("/api/items", (req, res) =>{
     });
 });
 
-//Returns an item
+// Returns an item
 router.get("/api/items/:itemId", (req, res) =>{
     Item.findById(req.params.itemId, function (err, item) {
         if(err){
@@ -44,17 +68,5 @@ router.get("/api/items/:itemId", (req, res) =>{
         res.send(item);
     });
 });
-
-// Returns all items
-router.get("/api/items", (req, res) =>{
-    Item.find({}, function(err, items){
-        if(err){
-            console.log("Error:", err);
-            res.status(500).send(err);
-            return;
-        }
-        res.send(items); 
-    });
-  });
 
 module.exports = router;
