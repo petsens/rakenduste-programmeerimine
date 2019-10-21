@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const User = require("./user.model.js");
-const bcrypt = require ("bcrypt");
 
 // Gets all users
 router.get("/api/users", (req, res) =>{
@@ -20,15 +19,10 @@ router.post("/api/users/login", (req, res) =>{
         .catch( err =>{
             handleError(err, res);
         });
-/*     User.findOne({email: req.body.email}, (err, doc) =>{
-        if(err) return handleError(err, res);
-        res.send(doc);
-    }) */
 });
 
 // Creates new user(signup)
 router.post("/api/users/signup", (req, res) =>{
-
     User.signup(req.body)
         .then( user =>{
             res.status(200).json(user);

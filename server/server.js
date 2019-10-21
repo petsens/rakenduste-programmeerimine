@@ -12,6 +12,9 @@ const bodyParser = require("body-parser");
 
 const DB_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS}@cluster0-ru9x4.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
+app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.json());
+
 app.use(bodyParser.json());
 
 app.use(itemRouter);
