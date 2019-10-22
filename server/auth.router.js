@@ -16,8 +16,11 @@ router.post("/login",userController.login);
 
 // Creates new user(signup)
 router.post("/signup", [
-    check('email').isEmail(),
-    check('password').isLength({ min: 5 })
+    check("email").isEmail().normalizeEmail(),
+    check("password")
+        .isLength({ min: 5 }).withMessage("Password length must be at least 5 characters!")
+        .matches(/\d/).withMessage("Password must contain at least 1 number!")
+        .not().isIn(["123", "password1", "parool1"]).withMessage("Do not use a common word as the password")
   ],
   validationMiddleware,
   userController.signup
