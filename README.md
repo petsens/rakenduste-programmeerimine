@@ -3,7 +3,7 @@ Rakenduste programmeerimine 2019
 
 Sellest tuleb üks lahe asi
 
-Heroku - https://royaldetailing.herokuapp.com/index.html
+Heroku - https://royaldetailing.herokuapp.com
 
 Küsimus: Kuidas kiirelt convertida
 Vastus: numbrist stringiks lisa + "" <br/>
