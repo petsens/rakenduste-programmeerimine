@@ -24,11 +24,9 @@ class HomePage extends React.PureComponent{
     fetchItems = () => {
         fetch("/api/v1/items")
         .then(res =>{
-            console.log("res", res);
             return res.json();
         })
         .then( items => {
-            console.log("items", items);
             this.setState({
                 items
             });
@@ -53,7 +51,6 @@ class HomePage extends React.PureComponent{
     };
     
     unselectedCategory = (categoryName) => {
-        console.log(this.state.selectedCategories.slice());
             const newArr = this.state.selectedCategories.filter( cn => cn !== categoryName);
             this.setState( {
                 selectedCategories: newArr

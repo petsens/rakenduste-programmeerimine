@@ -9,7 +9,6 @@ const protectedRedirect = (WrappedComponent) => {
             user: PropTypes.object.isRequired,
         };
         render () {
-            console.log("protected redirect", this.props);
             if(!this.props.user.email) return <Redirect to = {"/"} />;
             return (
                 <WrappedComponent {...this.props} />

@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import "./itemslist.css";
 
 const ItemsList = (props) => {
-    console.log("items list", props);
     return (
         <div className = {"content"}>    
         {
