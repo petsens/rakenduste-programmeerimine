@@ -4,6 +4,7 @@ import Checkbox from "../components/Checkbox.jsx";
 import PropTypes from "prop-types";
 import "./homepage.css";
 import SortDropdown from "../components/SortDropdown.jsx";
+import {getItems} from "../actions/itemsActions";
 
 class HomePage extends React.PureComponent{
 
@@ -22,18 +23,16 @@ class HomePage extends React.PureComponent{
     }
 
     fetchItems = () => {
-        fetch("/api/v1/items")
-        .then(res =>{
-            return res.json();
-        })
-        .then( items => {
-            this.setState({
-                items
+        getItems()
+            .then(items => {
+                console.log("items", items);
+                this.setState({
+                    items
+                });
+            })
+            .catch(err => {
+                console.log("err", err);
             });
-        })
-        .catch(err =>{
-            console.log("err", err);
-        });
     };
 
     handleFilterSelect = (event) => {
