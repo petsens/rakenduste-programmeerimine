@@ -1,0 +1,16 @@
+.itemFilters_wrapper{
+    display: flex;
+}
+
+.itemFilters_wrapper > div{
+    margin: 0px 10px;
+}
+
+body {
+    font-family: 'Open-Sans', sans-serif;
+}
+
+.item-image {
+    display: flex;
+    margin: 0px 10px;
+}
